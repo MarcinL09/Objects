@@ -12,7 +12,6 @@ console.log(getFullNameFromUser(user));
 
 // Write the createUser function
 
-
 user.firstName = 'Katie',
 user.lastName = 'Williams'
 
@@ -76,5 +75,48 @@ removeProperty(userData, 'name'); // false
 propertyToRemove = removeProperty(userData, 'weight'); // false
 console.log(propertyToRemove); // {}
 
+// Write the checkIfUsersHaveTheSameName function
+
+const firstJohn = {
+    firstName: 'John',
+    lastName: 'Smith'
+}
+const secondJohn = {
+    firstName: 'John',
+    lastName: 'Smith'
+}
+const adam = {
+    firstName: 'Adam',
+    lastName: 'Johnson'
+}
+
+function checkIfUsersHaveTheSameName(firstObject, secondObject) {
+    const firstObjectKeys = Object.keys(firstObject);
+    const secondObjectKeys = Object.keys(secondObject);
+
+    if (firstObjectKeys.length !== secondObjectKeys.length) {
+        return false;
+    }
+    return true;
+}
+
+const theSameName = checkIfUsersHaveTheSameName(firstJohn, secondJohn); // true
+checkIfUsersHaveTheSameName(firstJohn, adam); // false
+console.log(theSameName);
+
+
+// Write the getVoteCount function
+
+const votes = {
+    upvotes: 10,
+    downvotes: 5
+}
+function getVoteCount(votes) {
+    return votes.upvotes - votes.downvotes;
+}
+
+getVoteCount({ upvotes: 10, downvotes: 5 }); // 5
+getVoteCount({ upvotes: 75, downvotes: 90 }); // -15
+getVoteCount({ upvotes: 50, downvotes: 50 }); // 0
 
 
