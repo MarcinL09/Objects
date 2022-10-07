@@ -54,21 +54,27 @@ console.log(salarySum);
 // Write the isObject function. Use the typeof operator.
 
 // function isObject(object) {
-//     return;
+//     return object !== null && typeof === {};
 // }
 //
-// isObject({}); // true
-// isObject(null); // false
+// const objectFirst = isObject({}); // true
+// // isObject(null); // false
+// console.log(objectFirst);
 
 // Write the removeProperty function. It should return true if there is a property with a given key to
 // remove. Otherwise, it should return false.
-//     const user = {
-//     name: 'John'
-// }
-// removeProperty(user, 'name'); // true
-// removeProperty(user, 'name'); // false
-// removeProperty(user, 'weight'); // false
-// console.log(user); // {}
+    const userData = {
+    name: 'John',
+}
+
+function removeProperty(userData, propertyData) {
+        return userData.hasOwnProperty(propertyData);
+}
+
+let propertyToRemove = removeProperty(userData, 'name'); // true
+removeProperty(userData, 'name'); // false
+propertyToRemove = removeProperty(userData, 'weight'); // false
+console.log(propertyToRemove); // {}
 
 
 
