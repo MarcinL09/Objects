@@ -134,3 +134,11 @@ getCubeVolume({ width: 100, length: 500, height: 0}); // 0
 getCubeVolume({ width: 15, length: 2, height: 5}); // 150
 console.log(getCubeVolume(cube));
 
+// Write the getCityInformation function
+
+const getCityInformation = ({
+    name: 'Warsaw',
+    country: 'Poland',
+    areaInKilometers: 517
+}) // Warsaw is in Poland and has an area of 517 square kilometers
+console.log(`${getCityInformation.name} is in ${getCityInformation.country} and has an area of ${getCityInformation.areaInKilometers} square kilometers` )
