@@ -90,19 +90,18 @@ const adam = {
     lastName: 'Johnson'
 }
 
-function checkIfUsersHaveTheSameName(firstObject, secondObject) {
-    const firstObjectKeys = Object.keys(firstObject);
-    const secondObjectKeys = Object.keys(secondObject);
+    function checkIfUsersHaveTheSameName(firstObject, secondObject) {
+        const firstUserFirstName = firstObject.firstName;
+        const firstUserLastName = firstObject.lastName;
 
-    if (firstObjectKeys.length !== secondObjectKeys.length) {
-        return false;
-    }
-    return true;
+        const secondUserFirstName = secondObject.firstName;
+        const secondUserLastName = secondObject.lastName;
+        return firstUserFirstName === secondUserFirstName && firstUserLastName === secondUserLastName
 }
 
-const theSameName = checkIfUsersHaveTheSameName(firstJohn, secondJohn); // true
-checkIfUsersHaveTheSameName(firstJohn, adam); // false
-console.log(theSameName);
+let userTheSameName = checkIfUsersHaveTheSameName(firstJohn, secondJohn); // true
+userTheSameName = checkIfUsersHaveTheSameName(firstJohn, adam); // false
+console.log(userTheSameName);
 
 
 // Write the getVoteCount function
