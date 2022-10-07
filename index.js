@@ -119,4 +119,18 @@ getVoteCount({ upvotes: 10, downvotes: 5 }); // 5
 getVoteCount({ upvotes: 75, downvotes: 90 }); // -15
 getVoteCount({ upvotes: 50, downvotes: 50 }); // 0
 
+// Write the getCubeVolume function
+const cube = {
+    width: 15,
+    length: 2,
+    height: 5
+}
+function getCubeVolume(cube) {
+    return cube.width * cube.length * cube.height;
+}
+
+getCubeVolume({ width: 10, length: 5, height: 2}); // 100
+getCubeVolume({ width: 100, length: 500, height: 0}); // 0
+getCubeVolume({ width: 15, length: 2, height: 5}); // 150
+console.log(getCubeVolume(cube));
 
