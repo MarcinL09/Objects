@@ -53,12 +53,12 @@ console.log(salarySum);
 // Write the isObject function. Use the typeof operator.
 
 // function isObject(object) {
-//     return object !== null && typeof === {};
+//     return object !== null;
 // }
 //
 // const objectFirst = isObject({}); // true
 // // isObject(null); // false
-// console.log(objectFirst);
+// console.log(typeof objectFirst);
 
 // Write the removeProperty function. It should return true if there is a property with a given key to
 // remove. Otherwise, it should return false.
@@ -135,9 +135,13 @@ console.log(getCubeVolume(cube));
 
 // Write the getCityInformation function
 
-const getCityInformation = ({
+const cityInformation = {
     name: 'Warsaw',
     country: 'Poland',
     areaInKilometers: 517
-}) // Warsaw is in Poland and has an area of 517 square kilometers
-console.log(`${getCityInformation.name} is in ${getCityInformation.country} and has an area of ${getCityInformation.areaInKilometers} square kilometers` )
+}
+
+function getCityInformation(information){
+    return (`${information.name} is in ${information.country} and has an area of ${information.areaInKilometers} square kilometers`)
+}// Warsaw is in Poland and has an area of 517 square kilometers
+console.log(getCityInformation(cityInformation));
