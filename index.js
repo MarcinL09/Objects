@@ -145,3 +145,23 @@ function getCityInformation(information){
     return (`${information.name} is in ${information.country} and has an area of ${information.areaInKilometers} square kilometers`)
 }// Warsaw is in Poland and has an area of 517 square kilometers
 console.log(getCityInformation(cityInformation));
+
+// Write the getUserCopy function. Assume that users only have the firstName and lastName.
+
+const john = {
+    firstName: 'John',
+    lastName: 'Smith'
+}
+
+function getUserCopy(copyUser) {
+   return copyUser = {
+       firstName: copyUser.firstName,
+       lastName: copyUser.firstName
+   }
+}
+
+const newUser = getUserCopy(john);
+console.log(newUser.firstName); // John
+console.log(newUser.lastName); // John
+console.log(newUser === john); // false <-- this is crucial
+
