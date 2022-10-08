@@ -52,16 +52,16 @@ console.log(salarySum);
 
 // Write the isObject function. Use the typeof operator.
 
-// function isObject(object) {
-//     return object !== null;
-// }
-//
-// const objectFirst = isObject({}); // true
-// // isObject(null); // false
-// console.log(typeof objectFirst);
+function isObject(object) {
+    return typeof object === typeof null;
+}
+
+console.log(isObject({})); // true
+console.log(isObject(null)); // false
 
 // Write the removeProperty function. It should return true if there is a property with a given key to
 // remove. Otherwise, it should return false.
+
     const userData = {
     name: 'John',
 }
@@ -165,3 +165,13 @@ console.log(newUser.firstName); // John
 console.log(newUser.lastName); // John
 console.log(newUser === john); // false <-- this is crucial
 
+// return a string like this: "This white dog has 4 legs."
+
+const animal = {
+    name: "dog",
+    legs: 4,
+    color: "white"}
+function animalDescription(animalObject){
+    return (`This ${animalObject.color} ${animalObject.name} has ${animalObject.legs} legs.`);
+}
+console.log(animalDescription(animal));
