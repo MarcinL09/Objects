@@ -35,9 +35,9 @@ function checkIfPropertyIsDefined(userObject, propertyName) {
 }
 
 const checkProperty = checkIfPropertyIsDefined(userObject, 'firstName'); // true
-const checkPropertysecond = checkIfPropertyIsDefined(userObject, 'height'); // false
+const checkPropertySecond = checkIfPropertyIsDefined(userObject, 'height'); // false
 console.log(checkProperty);
-console.log(checkPropertysecond)
+console.log(checkPropertySecond);
 
 // Add up all of the salaries
 
@@ -53,7 +53,7 @@ console.log(salarySum);
 // Write the isObject function. Use the typeof operator.
 
 function isObject(object) {
-    return typeof object === typeof null;
+    return object !== null;
 }
 
 console.log(isObject({})); // true
@@ -62,12 +62,12 @@ console.log(isObject(null)); // false
 // Write the removeProperty function. It should return true if there is a property with a given key to
 // remove. Otherwise, it should return false.
 
-    const userData = {
+const userData = {
     name: 'John',
 }
 
 function removeProperty(userData, propertyData) {
-        return userData.hasOwnProperty(propertyData);
+    return userData.hasOwnProperty(propertyData);
 }
 
 let propertyToRemove = removeProperty(userData, 'name'); // true
@@ -90,13 +90,13 @@ const adam = {
     lastName: 'Johnson'
 }
 
-    function checkIfUsersHaveTheSameName(firstObject, secondObject) {
-        const firstUserFirstName = firstObject.firstName;
-        const firstUserLastName = firstObject.lastName;
+function checkIfUsersHaveTheSameName(firstObject, secondObject) {
+    const firstUserFirstName = firstObject.firstName;
+    const firstUserLastName = firstObject.lastName;
 
-        const secondUserFirstName = secondObject.firstName;
-        const secondUserLastName = secondObject.lastName;
-        return firstUserFirstName === secondUserFirstName && firstUserLastName === secondUserLastName
+    const secondUserFirstName = secondObject.firstName;
+    const secondUserLastName = secondObject.lastName;
+    return firstUserFirstName === secondUserFirstName && firstUserLastName === secondUserLastName
 }
 
 let userTheSameName = checkIfUsersHaveTheSameName(firstJohn, secondJohn); // true
@@ -106,32 +106,23 @@ console.log(userTheSameName);
 
 // Write the getVoteCount function
 
-const votes = {
-    upvotes: 10,
-    downvotes: 5
-}
 function getVoteCount(votes) {
     return votes.upvotes - votes.downvotes;
 }
 
-getVoteCount({ upvotes: 10, downvotes: 5 }); // 5
-getVoteCount({ upvotes: 75, downvotes: 90 }); // -15
-getVoteCount({ upvotes: 50, downvotes: 50 }); // 0
+console.log(getVoteCount({ upvotes: 10, downvotes: 5 })); // 5
+console.log(getVoteCount({ upvotes: 75, downvotes: 90 })); // -15
+console.log(getVoteCount({ upvotes: 50, downvotes: 50 })); // 0
 
 // Write the getCubeVolume function
-const cube = {
-    width: 15,
-    length: 2,
-    height: 5
-}
+
 function getCubeVolume(cube) {
     return cube.width * cube.length * cube.height;
 }
 
-getCubeVolume({ width: 10, length: 5, height: 2}); // 100
-getCubeVolume({ width: 100, length: 500, height: 0}); // 0
-getCubeVolume({ width: 15, length: 2, height: 5}); // 150
-console.log(getCubeVolume(cube));
+console.log(getCubeVolume({ width: 10, length: 5, height: 2})); // 100
+console.log(getCubeVolume({ width: 100, length: 500, height: 0})); // 0
+console.log(getCubeVolume({ width: 15, length: 2, height: 5})); // 150
 
 // Write the getCityInformation function
 
