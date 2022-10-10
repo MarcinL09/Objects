@@ -145,7 +145,7 @@ const john = {
 }
 
 function getUserCopy(userName) {
-   return userName = {
+   return {
        firstName: userName.firstName,
        lastName: userName.firstName
    }
