@@ -90,12 +90,12 @@ const adam = {
     lastName: 'Johnson'
 }
 
-function checkIfUsersHaveTheSameName(firstObject, secondObject) {
-    const firstUserFirstName = firstObject.firstName;
-    const firstUserLastName = firstObject.lastName;
+function checkIfUsersHaveTheSameName(firstPerson, secondPerson) {
+    const firstUserFirstName = firstPerson.firstName;
+    const firstUserLastName = firstPerson.lastName;
 
-    const secondUserFirstName = secondObject.firstName;
-    const secondUserLastName = secondObject.lastName;
+    const secondUserFirstName = secondPerson.firstName;
+    const secondUserLastName = secondPerson.lastName;
     return firstUserFirstName === secondUserFirstName && firstUserLastName === secondUserLastName
 }
 
