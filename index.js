@@ -161,7 +161,8 @@ console.log(newUser === john); // false <-- this is crucial
 const animal = {
     name: "dog",
     legs: 4,
-    color: "white"}
+    color: "white"
+}
 function animalDescription(animalObject){
     return (`This ${animalObject.color} ${animalObject.name} has ${animalObject.legs} legs.`);
 }
