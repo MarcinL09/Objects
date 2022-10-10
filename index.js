@@ -28,16 +28,15 @@ console.log(userName);
 
 // write the checkIfPropertyIsDefined function
 const userObject = {
-    height: 170
+    firstName: 'John'
 }
-function checkIfPropertyIsDefined(userObject, propertyName) {
-    return userObject[propertyName] === undefined;
+function checkIfPropertyIsDefined(user, propertyName) {
+    return user[propertyName] !== undefined;
 }
 
-const checkProperty = checkIfPropertyIsDefined(userObject, 'firstName'); // true
-const checkPropertySecond = checkIfPropertyIsDefined(userObject, 'height'); // false
-console.log(checkProperty);
-console.log(checkPropertySecond);
+console.log(checkIfPropertyIsDefined(userObject, 'firstName')); // true
+console.log(checkIfPropertyIsDefined(userObject, 'height')); // false
+
 
 // Add up all of the salaries
 
