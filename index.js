@@ -65,14 +65,15 @@ const userData = {
     name: 'John',
 }
 
-function removeProperty(userData, propertyData) {
-    return userData.hasOwnProperty(propertyData);
+function removeProperty(user, propertyData) {
+    return user[propertyData] !== undefined;
 }
 
-let propertyToRemove = removeProperty(userData, 'name'); // true
-removeProperty(userData, 'name'); // false
-propertyToRemove = removeProperty(userData, 'weight'); // false
-console.log(propertyToRemove); // {}
+console.log(removeProperty(userData, 'name')); // true
+delete userData.name
+console.log(removeProperty(userData, 'name')); // false
+console.log(removeProperty(userData, 'weight')); // false
+console.log(userData); // {}
 
 // Write the checkIfUsersHaveTheSameName function
 
