@@ -144,10 +144,10 @@ const john = {
     lastName: 'Smith'
 }
 
-function getUserCopy(copyUser) {
-   return copyUser = {
-       firstName: copyUser.firstName,
-       lastName: copyUser.firstName
+function getUserCopy(userName) {
+   return userName = {
+       firstName: userName.firstName,
+       lastName: userName.firstName
    }
 }
 
